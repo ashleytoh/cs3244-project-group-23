@@ -3,8 +3,8 @@ ML project on credit approval model for cs3244
 
 
 **10 March - 16 March**
-Define project scope and objectives
-Search for and finalise datasets
+Define project scope and objectives\
+Search for and finalise datasets\
 Assign roles and responsibilities
 
 **17 March - 23 March**
