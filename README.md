@@ -1,5 +1,5 @@
 # Enhancing Financial Inclusion through Fair and Predictive Credit Models
-CS3244 Group 23
+*CS3244 Group 23*
 
 
 ## Table of Contents
