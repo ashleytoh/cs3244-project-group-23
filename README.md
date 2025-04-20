@@ -121,7 +121,7 @@ CS3244-PROJECT-GROUP-23/
 │   ├── data_cleaning.ipynb 
 │   └── feature_engineering.ipynb
 ├── final_model/
-│   ├── visuals/ # Folder containing plots and figures generated during analysis and evaluation
+│   ├── visuals/                                   # Folder containing plots and figures generated during analysis and evaluation
 │   │   ├── interactive_3d_plot_fns.html           # Interactive 3D plot visualizing False Negatives (produced from `final_model/microanalysis.ipynb`)
 │   │   ├── interactive_3d_plot_misclass.html      # Interactive 3D plot of misclassified points (produced from `final_model/microanalysis.ipynb`)           
 │   ├── fairness_eval.ipynb 
