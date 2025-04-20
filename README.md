@@ -71,6 +71,8 @@ Each row reflects an applicant’s loan status in a specific month.
 
 ## Setup Instructions
 
+Ensure that you have [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) installed.
+
 ### 1. Clone the repository:
 In your terminal, enter the following command to clone the repository. Afterwards, `cd` into the project directory.
    ```bash
