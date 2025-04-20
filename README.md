@@ -109,24 +109,24 @@ CS3244-PROJECT-GROUP-23/
 │   └── baseline_models.ipynb 
 ├── data/
 │   ├── processed/
-│   │   ├── cleaned_applications.csv # Cleaned version of raw application data (produced from `data_preprocessing/data_cleaning.ipynb`)
-│   │   ├── cleaned_credit_records.csv # Cleaned version of raw credit records (produced from `data_preprocessing/data_cleaning.ipynb`)
-│   │   ├── test_set.csv # Test set used to evaluate model performance (produced from `data_preprocessing/data_preprocessing.ipynb`)
-│   │   ├── train_set_SMOTEd.csv # Train set with SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
-│   │   └── train_set.csv # Train set with no SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
+│   │   ├── cleaned_applications.csv               # Cleaned version of raw application data (produced from `data_preprocessing/data_cleaning.ipynb`)
+│   │   ├── cleaned_credit_records.csv             # Cleaned version of raw credit records (produced from `data_preprocessing/data_cleaning.ipynb`)
+│   │   ├── test_set.csv                           # Test set used to evaluate model performance (produced from `data_preprocessing/data_preprocessing.ipynb`)
+│   │   ├── train_set_SMOTEd.csv                   # Train set with SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
+│   │   └── train_set.csv                          # Train set with no SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
 │   └── raw/
-│       ├── application_record.csv # Original dataset containing applicant demographic and employment info
-│       └── credit_record.csv # Original dataset with applicant credit history over time
+│       ├── application_record.csv                 # Original dataset containing applicant demographic and employment info
+│       └── credit_record.csv                      # Original dataset with applicant credit history over time
 ├── data_preprocessing/
 │   ├── data_cleaning.ipynb 
 │   └── feature_engineering.ipynb
 ├── final_model/
 │   ├── visuals/ # Folder containing plots and figures generated during analysis and evaluation
-│   │   ├── interactive_3d_plot_fns.html         # Interactive 3D plot visualizing False Negatives (produced from `final_model/microanalysis.ipynb`)
-│   │   ├── interactive_3d_plot_misclass.html    # Interactive 3D plot of misclassified points (produced from `final_model/microanalysis.ipynb`)           
+│   │   ├── interactive_3d_plot_fns.html           # Interactive 3D plot visualizing False Negatives (produced from `final_model/microanalysis.ipynb`)
+│   │   ├── interactive_3d_plot_misclass.html      # Interactive 3D plot of misclassified points (produced from `final_model/microanalysis.ipynb`)           
 │   ├── fairness_eval.ipynb 
 │   ├── microanalysis.ipynb
-│   ├── test_set_with_predictions.csv # Output CSV with model predictions on the test set (produced from `final_model/tuning.ipynb`)
+│   ├── test_set_with_predictions.csv              # Output CSV with model predictions on the test set (produced from `final_model/tuning.ipynb`)
 │   └── tuning.ipynb
 ├── requirements.txt
 └── README.md       
