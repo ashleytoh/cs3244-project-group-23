@@ -1,4 +1,5 @@
 # Enhancing Financial Inclusion through Fair and Predictive Credit Models
+*CS3244 Group 23*
 
 
 ## Table of Contents
@@ -28,14 +29,14 @@ Our project aims to build a credit approval model that balances accuracy and fai
 
 ## Datasets
 
-We utilise a [credit card dataset](https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction) for our project. This contains two datasets linked by a common client `ID`:
+We utilised a [credit card dataset](https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction) for our project. This contains two datasets linked by a common client `ID`:
 
 ### `application_record.csv` – Personal and financial information  
 Each row represents a loan application.
 
 | Feature | Values | Explanation |
 |---------|--------|-------------|
-| ID | Integer | Client identifier. Foreign key linking to credit_record.csv. |
+| ID | Integer | Loan Application identifier. Foreign key linking to credit_record.csv. |
 | CODE_GENDER | M, F | Gender of the applicant. |
 | FLAG_OWN_CAR | 0, 1 | Whether the applicant owns a car. |
 | FLAG_OWN_REALTY | 0, 1 | Whether the applicant owns a property. |
@@ -70,6 +71,8 @@ Each row reflects an applicant’s loan status in a specific month.
 
 ## Setup Instructions
 
+Ensure that you have [Python 3.10.6](https://www.python.org/downloads/release/python-3106/) installed.
+
 ### 1. Clone the repository:
 In your terminal, enter the following command to clone the repository. Afterwards, `cd` into the project directory.
    ```bash
@@ -103,25 +106,27 @@ In your terminal, enter the following command to clone the repository. Afterward
 ```plaintext
 CS3244-PROJECT-GROUP-23/
 ├── baseline_models/
-│   └── baseline_models.ipynb
+│   └── baseline_models.ipynb 
 ├── data/
 │   ├── processed/
-│   │   ├── cleaned_applications.csv
-│   │   ├── cleaned_credit_records.csv
-│   │   ├── test_set.csv
-│   │   ├── train_set_SMOTEd.csv
-│   │   └── train_set.csv
+│   │   ├── cleaned_applications.csv               # Cleaned version of raw application data (produced from `data_preprocessing/data_cleaning.ipynb`)
+│   │   ├── cleaned_credit_records.csv             # Cleaned version of raw credit records (produced from `data_preprocessing/data_cleaning.ipynb`)
+│   │   ├── test_set.csv                           # Test set used to evaluate model performance (produced from `data_preprocessing/data_preprocessing.ipynb`)
+│   │   ├── train_set_SMOTEd.csv                   # Train set with SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
+│   │   └── train_set.csv                          # Train set with no SMOTE (produced from `data_preprocessing/data_preprocessing.ipynb`)
 │   └── raw/
-│       ├── application_record.csv
-│       └── credit_record.csv
+│       ├── application_record.csv                 # Original dataset containing applicant demographic and employment info
+│       └── credit_record.csv                      # Original dataset with applicant credit history over time
 ├── data_preprocessing/
-│   ├── data_cleaning.ipynb
+│   ├── data_cleaning.ipynb 
 │   └── feature_engineering.ipynb
 ├── final_model/
-│   ├── visuals/                             
-│   ├── fairness_eval.ipynb
+│   ├── visuals/                                   # Folder containing plots and figures generated during analysis and evaluation
+│   │   ├── interactive_3d_plot_fns.html           # Interactive 3D plot visualizing False Negatives (produced from `final_model/microanalysis.ipynb`)
+│   │   ├── interactive_3d_plot_misclass.html      # Interactive 3D plot of misclassified points (produced from `final_model/microanalysis.ipynb`)           
+│   ├── fairness_eval.ipynb 
 │   ├── microanalysis.ipynb
-│   ├── test_set_with_predictions.csv
+│   ├── test_set_with_predictions.csv              # Output CSV with model predictions on the test set (produced from `final_model/tuning.ipynb`)
 │   └── tuning.ipynb
 ├── requirements.txt
 └── README.md       
@@ -131,7 +136,7 @@ CS3244-PROJECT-GROUP-23/
 To understand the project development from data processing to final analysis, we recommend reviewing the Jupyter notebooks in the following sequence:
 
 1.  **Data Preparation:**
-    * `data_preprocessing/data_cleaning.ipynb`: Understand how the original datasets (i.e. `data/raw/`) was initially cleaned and handled.
+    * `data_preprocessing/data_cleaning.ipynb`: Understand how the original datasets (i.e. `data/raw/`) were initially cleaned and handled.
     * `data_preprocessing/feature_engineering.ipynb`: See how we conducted EDA leading to feature engineering, which created the datasets in `data/processed/`.
 2.  **Modeling & Evaluation:**
     * `baseline_models/baseline_models.ipynb`: Explore the initial baseline models used for comparison.
